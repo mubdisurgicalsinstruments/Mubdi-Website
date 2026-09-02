@@ -1,0 +1,4 @@
+{
+  "installCommand": "sh scripts/vercel-install.sh",
+  "buildCommand": "node scripts/verify-public-images.mjs && npm run build"
+}
