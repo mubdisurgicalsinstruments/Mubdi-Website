@@ -60,7 +60,7 @@ export default function CatalogProductGallery({
   // instrument visible with navy negative space — never crop or stretch.
   return (
     <div
-      className="relative mx-auto aspect-square w-full max-w-[1536px] overflow-hidden rounded-2xl bg-navy"
+      className="relative mx-auto aspect-square w-full max-w-[1536px] overflow-hidden rounded-xl bg-navy sm:rounded-2xl lg:max-h-none"
       style={{ aspectRatio: "1 / 1" }}
     >
       <GalleryImage

@@ -131,7 +131,7 @@ export default function CustomManufacturing() {
   return (
     <section
       id="oem"
-      className="scroll-mt-28 bg-background py-12 sm:py-16 lg:py-20"
+      className="scroll-mt-24 bg-background py-10 sm:scroll-mt-28 sm:py-16 lg:py-20"
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
         <div className="max-w-3xl">

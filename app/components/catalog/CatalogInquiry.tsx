@@ -79,11 +79,11 @@ export default function CatalogInquiry({
   }
 
   return (
-    <section className="mt-8 rounded-[1.75rem] bg-navy px-6 py-10 text-center shadow-[0_16px_36px_rgba(10,35,66,0.16)] sm:mt-10 sm:rounded-[2rem] sm:px-12 sm:py-12">
+    <section className="mt-6 rounded-2xl bg-navy px-5 py-8 text-center shadow-[0_16px_36px_rgba(10,35,66,0.16)] sm:mt-10 sm:rounded-[2rem] sm:px-12 sm:py-12">
       <p className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white/55">
         Custom sourcing support
       </p>
-      <h2 className="mx-auto mt-4 max-w-2xl text-2xl font-bold tracking-[-0.03em] text-white sm:text-3xl">
+      <h2 className="mx-auto mt-3 max-w-2xl text-xl font-bold leading-[1.2] tracking-[-0.03em] text-white sm:mt-4 sm:text-3xl">
         Can&apos;t find the instrument you&apos;re looking for?
       </h2>
       <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-white/70 sm:text-base">

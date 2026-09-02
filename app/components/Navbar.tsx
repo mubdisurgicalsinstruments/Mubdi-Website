@@ -18,7 +18,7 @@ const navigationItems = [
 function BrandMark() {
   return (
     <span
-      className="grid size-12 shrink-0 place-items-center bg-navy text-lg font-semibold text-white shadow-[0_10px_22px_rgba(10,35,66,0.16)] lg:size-[3.25rem]"
+      className="grid size-10 shrink-0 place-items-center bg-navy text-base font-semibold text-white shadow-[0_10px_22px_rgba(10,35,66,0.16)] sm:size-12 lg:size-[3.25rem] lg:text-lg"
       style={{ clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)" }}
       aria-hidden="true"
     >
@@ -162,7 +162,7 @@ export default function Navbar({ searchIndex = [] }: { searchIndex?: CatalogSear
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/90 bg-white/98 shadow-[0_2px_14px_rgba(10,35,66,0.04)] backdrop-blur-sm">
-      <div className="mx-auto grid h-[5.25rem] max-w-7xl grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-4 px-5 sm:gap-5 sm:px-8 lg:h-[5.75rem] lg:gap-6 lg:px-10">
+      <div className="mx-auto grid h-16 max-w-7xl grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 px-4 sm:gap-4 sm:px-5 lg:h-[5.75rem] lg:gap-6 lg:px-10">
         <Link
           href="/"
           className="relative z-20 flex shrink-0 items-center gap-3.5 rounded-sm transition-opacity duration-200 hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-navy"
@@ -256,7 +256,7 @@ export default function Navbar({ searchIndex = [] }: { searchIndex?: CatalogSear
           </nav>
         </div>
 
-        <div className="relative z-20 flex shrink-0 items-center justify-end gap-2 sm:gap-3">
+        <div className="relative z-20 flex shrink-0 items-center justify-end gap-1.5 sm:gap-3">
           <CartIconLink />
           <CatalogSearch
             index={searchIndex}
@@ -299,10 +299,10 @@ export default function Navbar({ searchIndex = [] }: { searchIndex?: CatalogSear
           isMenuOpen ? "max-h-[min(36rem,75vh)] overflow-y-auto opacity-100" : "max-h-0 border-t-0 opacity-0"
         }`}
       >
-        <nav className="mx-auto flex max-w-7xl flex-col px-5 py-3 sm:px-8" aria-label="Mobile navigation">
+        <nav className="mx-auto flex max-w-7xl flex-col px-4 py-2 sm:px-8 sm:py-3" aria-label="Mobile navigation">
           <Link
             href="/#categories"
-            className="block py-3.5 text-sm font-medium text-navy transition-colors hover:text-navy"
+            className="block min-h-11 py-2.5 text-sm font-medium text-navy transition-colors hover:text-navy"
             onClick={(event) => {
               handleHashLinkClick(event, "/#categories");
               closeMenu();
@@ -315,7 +315,7 @@ export default function Navbar({ searchIndex = [] }: { searchIndex?: CatalogSear
             <Link
               key={category.slug}
               href={`/products/${category.slug}`}
-              className="flex items-center justify-between border-b border-border-light py-3 pl-3 text-sm font-medium text-navy-muted transition-colors hover:text-navy"
+              className="flex min-h-11 items-center justify-between border-b border-border-light py-2.5 pl-3 text-sm font-medium text-navy-muted transition-colors hover:text-navy"
               onClick={closeMenu}
             >
               {category.name}
@@ -325,7 +325,7 @@ export default function Navbar({ searchIndex = [] }: { searchIndex?: CatalogSear
             <Link
               key={item.label}
               href={item.href}
-              className="flex items-center justify-between border-b border-border-light py-3.5 text-sm font-medium text-navy-muted last:border-b-0 transition-colors hover:text-navy"
+              className="flex min-h-11 items-center justify-between border-b border-border-light py-2.5 text-sm font-medium text-navy-muted last:border-b-0 transition-colors hover:text-navy"
               onClick={(event) => {
                 handleHashLinkClick(event, item.href);
                 closeMenu();
@@ -336,7 +336,7 @@ export default function Navbar({ searchIndex = [] }: { searchIndex?: CatalogSear
           ))}
           <Link
             href="/cart"
-            className="flex items-center justify-between border-b border-border-light py-3.5 text-sm font-medium text-navy-muted transition-colors hover:text-navy"
+            className="flex min-h-11 items-center justify-between border-b border-border-light py-2.5 text-sm font-medium text-navy-muted transition-colors hover:text-navy"
             onClick={closeMenu}
           >
             Shopping Cart

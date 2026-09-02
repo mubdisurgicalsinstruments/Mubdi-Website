@@ -140,7 +140,7 @@ export default function AddToCartPanel({
             <div className="inline-flex items-center rounded-[var(--radius-control)] border border-border bg-white">
               <button
                 type="button"
-                className="grid size-8 place-items-center text-navy transition-colors hover:bg-warm-gray disabled:opacity-40"
+                className="grid size-10 place-items-center text-navy transition-colors hover:bg-warm-gray disabled:opacity-40 sm:size-8"
                 aria-label="Decrease quantity"
                 disabled={currentQuantity() <= 1}
                 onClick={() => {
@@ -170,7 +170,7 @@ export default function AddToCartPanel({
               />
               <button
                 type="button"
-                className="grid size-8 place-items-center text-navy transition-colors hover:bg-warm-gray"
+                className="grid size-10 place-items-center text-navy transition-colors hover:bg-warm-gray sm:size-8"
                 aria-label="Increase quantity"
                 onClick={() => {
                   setQuantityInput(String(currentQuantity() + 1));

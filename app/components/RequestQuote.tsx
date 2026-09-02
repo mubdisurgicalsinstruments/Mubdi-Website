@@ -249,22 +249,22 @@ export default function RequestQuote({
   }
 
   return (
-    <section className="bg-background py-12 sm:py-16 lg:py-20">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+    <section className="bg-background py-10 sm:py-16 lg:py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-10">
         <div
           id="inquiry"
-          className="scroll-mt-[5.25rem] overflow-hidden rounded-[1.75rem] border border-border bg-white shadow-[0_16px_36px_rgba(10,35,66,0.07)] sm:rounded-[2rem] lg:scroll-mt-[5.75rem]"
+          className="scroll-mt-16 overflow-hidden rounded-2xl border border-border bg-white shadow-[0_16px_36px_rgba(10,35,66,0.07)] sm:rounded-[2rem] lg:scroll-mt-[5.75rem]"
         >
           <div className="grid min-w-0 lg:grid-cols-[1.15fr_0.85fr]">
-            <div className="min-w-0 p-7 sm:p-10 lg:p-12">
+            <div className="min-w-0 p-5 sm:p-10 lg:p-12">
               <p className="section-label">
                 <span className="section-label-rule" />
                 Request a quote
               </p>
-              <h2 className="section-heading mt-5 text-[2rem] sm:text-[2.45rem]">
+              <h2 className="section-heading mt-4 text-[1.65rem] leading-[1.15] sm:mt-5 sm:text-[2.45rem] sm:leading-[1.12]">
                 Tell us what you need to source.
               </h2>
-              <p className="body-copy mt-5 max-w-xl text-base">
+              <p className="body-copy mt-4 max-w-xl text-[0.9375rem] leading-relaxed sm:mt-5 sm:text-base sm:leading-[1.75]">
                 Distributors, hospitals, surgeons, medical professionals, and individual buyers can request pricing, product information, MOQ guidance, and manufacturing options. Share your requirements and we&apos;ll respond as soon as possible.
               </p>
 

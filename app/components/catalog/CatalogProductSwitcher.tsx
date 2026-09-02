@@ -35,7 +35,7 @@ export default function CatalogProductSwitcher({
           }
           window.location.assign(`${basePath}/${nextSlug}`);
         }}
-        className="w-full min-w-0 rounded-lg border border-border bg-white px-3 py-2.5 text-sm font-semibold text-navy outline-none focus:border-navy focus:ring-4 focus:ring-navy/10"
+        className="h-11 min-h-11 w-full min-w-0 rounded-lg border border-border bg-white px-3 py-2.5 text-sm font-semibold text-navy outline-none focus:border-navy focus:ring-4 focus:ring-navy/10"
       >
         {products.map((item) => (
           <option key={item.slug} value={item.slug}>

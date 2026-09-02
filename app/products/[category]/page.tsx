@@ -60,23 +60,23 @@ export default async function CategoryPage(props: PageProps<"/products/[category
       />
 
       <section className="bg-background">
-        <div className="mx-auto max-w-7xl px-5 py-6 sm:px-8 sm:py-7 lg:px-10">
+        <div className="mx-auto max-w-7xl px-4 py-4 sm:px-8 sm:py-7 lg:px-10">
           <CatalogBreadcrumb
             items={[
               { label: "Products", href: PRODUCTS_HOME_HREF },
               { label: category.name },
             ]}
           />
-          <p className="section-label mt-3">
+          <p className="section-label mt-2 sm:mt-3">
             <span className="section-label-rule" />
             Product category
           </p>
-          <h1 className="section-heading mt-2 text-[2.35rem] sm:text-5xl">{category.name}</h1>
-          <p className="body-copy mt-2 max-w-2xl text-base sm:text-[1.05rem]">{category.description}</p>
+          <h1 className="section-heading mt-1.5 text-[1.75rem] leading-[1.15] sm:mt-2 sm:text-5xl sm:leading-[1.12]">{category.name}</h1>
+          <p className="body-copy mt-1.5 max-w-2xl text-[0.9375rem] leading-relaxed sm:mt-2 sm:text-base sm:leading-[1.75] lg:text-[1.05rem]">{category.description}</p>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 py-8 sm:px-8 sm:py-10 lg:px-10">
+      <section className="mx-auto max-w-7xl px-4 py-5 sm:px-8 sm:py-10 lg:px-10">
         <CatalogNavigator
           label={category.name}
           actionLabel="Explore Products"

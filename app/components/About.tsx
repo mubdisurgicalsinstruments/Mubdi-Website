@@ -32,7 +32,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="scroll-mt-28 bg-background py-12 sm:py-16 lg:py-20"
+      className="scroll-mt-24 bg-background py-10 sm:scroll-mt-28 sm:py-16 lg:py-20"
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
         <div className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch lg:gap-20">

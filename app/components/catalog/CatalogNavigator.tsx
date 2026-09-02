@@ -38,9 +38,9 @@ export default function CatalogNavigator({
   }
 
   return (
-    <div>
+    <div className="min-w-0 max-w-full">
       <div
-        className="mb-4 flex gap-2 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] xl:hidden [&::-webkit-scrollbar]:hidden"
+        className="-mx-4 mb-3 flex max-w-[100vw] snap-x snap-mandatory gap-2 overflow-x-auto overscroll-x-contain px-4 pb-1 [-ms-overflow-style:none] [scrollbar-width:none] touch-pan-x xl:hidden [&::-webkit-scrollbar]:hidden"
         role="tablist"
         aria-label={label}
       >
@@ -54,13 +54,13 @@ export default function CatalogNavigator({
               role="tab"
               aria-selected={isActive}
               onClick={() => setActiveIndex(index)}
-              className={`shrink-0 rounded-lg border px-3.5 py-3 text-left text-sm font-semibold transition-colors ${
+              className={`max-w-[min(85vw,18rem)] shrink-0 snap-start rounded-lg border px-3 py-2.5 text-left text-[0.8125rem] font-semibold leading-snug transition-colors sm:px-3.5 sm:text-sm ${
                 isActive
                   ? "border-navy bg-navy text-white"
                   : "border-border bg-white text-navy-muted"
               }`}
             >
-              {item.name}
+              <span className="line-clamp-2">{item.name}</span>
             </button>
           );
         })}
@@ -115,7 +115,7 @@ export default function CatalogNavigator({
           aria-live="polite"
         >
           <Link href={activeItem.href} className="block" aria-label={`Open ${activeItem.name}`}>
-            <div className="relative aspect-[1.27/1] overflow-hidden rounded-2xl border border-border bg-surface shadow-[0_16px_34px_rgba(10,35,66,0.07)] sm:rounded-[1.75rem]">
+            <div className="relative aspect-[16/11] max-h-[min(38vh,15rem)] overflow-hidden rounded-xl border border-border bg-surface shadow-[0_16px_34px_rgba(10,35,66,0.07)] sm:max-h-none sm:aspect-[1.27/1] sm:rounded-2xl sm:rounded-[1.75rem]">
               <Image
                 key={`${activeItem.image}-${activeItem.name}`}
                 src={activeItem.image}
@@ -133,13 +133,13 @@ export default function CatalogNavigator({
               <span className="section-label-rule" />
               {label}
             </p>
-            <h2 className="section-heading mt-2 text-[2rem] sm:text-[2.45rem] lg:text-[2.2rem] xl:text-[2.45rem]">
+            <h2 className="section-heading mt-1.5 text-[1.5rem] leading-[1.15] sm:mt-2 sm:text-[2.45rem] lg:text-[2.2rem] lg:leading-[1.12] xl:text-[2.45rem]">
               {activeItem.name}
             </h2>
-            <p className="body-copy mt-3 line-clamp-4 text-sm sm:text-base lg:line-clamp-5">
+            <p className="body-copy mt-2 line-clamp-4 text-sm leading-relaxed sm:mt-3 sm:text-base lg:line-clamp-5">
               {activeItem.description}
             </p>
-            <Link href={activeItem.href} className="btn-primary mt-5 w-fit sm:mt-6">
+            <Link href={activeItem.href} className="btn-primary mt-4 w-full sm:mt-6 sm:w-fit">
               {actionLabel}
               <span className="size-4">
                 <ArrowIcon />

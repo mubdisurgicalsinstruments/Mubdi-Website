@@ -241,14 +241,14 @@ export default function CatalogSearch({
           value={query}
           onChange={(event) => setQuery(event.target.value)}
           onKeyDown={onKeyDown}
-          placeholder="Search products, categories, and instruments..."
+          placeholder="Search products..."
           autoComplete="off"
           role="combobox"
           aria-expanded={showResults}
           aria-controls={listId}
           aria-autocomplete="list"
           aria-activedescendant={activeIndex >= 0 ? `${listId}-option-${activeIndex}` : undefined}
-          className="h-11 w-full rounded-lg border border-border bg-white pl-11 pr-3 text-sm text-navy outline-none transition duration-200 focus:border-navy focus:ring-4 focus:ring-navy/10"
+          className="h-11 w-full min-w-0 rounded-lg border border-border bg-white pl-11 pr-3 text-sm text-navy outline-none transition duration-200 focus:border-navy focus:ring-4 focus:ring-navy/10 sm:placeholder:text-[0.8125rem]"
         />
         {resultsPanel}
       </div>
@@ -294,7 +294,7 @@ export default function CatalogSearch({
         {isOpen && !isDesktop && (
           <div>
             <div className="fixed inset-0 z-40 bg-navy/25" onClick={closeNavbarSearch} />
-            <div className="fixed inset-x-3 top-[5.75rem] z-50 rounded-xl border border-border bg-white p-3 shadow-[0_16px_34px_rgba(10,35,66,0.14)] lg:top-[6.25rem]">
+            <div className="fixed inset-x-3 top-[4.25rem] z-50 max-w-[calc(100vw-1.5rem)] rounded-xl border border-border bg-white p-3 shadow-[0_16px_34px_rgba(10,35,66,0.14)] sm:inset-x-4 lg:top-[6.25rem]">
               {searchField}
             </div>
           </div>

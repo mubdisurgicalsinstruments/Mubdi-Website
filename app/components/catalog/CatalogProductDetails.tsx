@@ -59,7 +59,7 @@ export default function CatalogProductDetails({
   }
 
   return (
-    <section className="mx-auto max-w-7xl overflow-x-clip px-4 py-4 sm:px-6 sm:py-5 lg:px-8 lg:py-6 xl:px-10">
+    <section className="mx-auto max-w-7xl overflow-x-clip px-4 py-3 sm:px-6 sm:py-5 lg:px-8 lg:py-6 xl:px-10">
       <CatalogBreadcrumb
         items={[
           { label: "Products", href: PRODUCTS_HOME_HREF },
@@ -69,16 +69,7 @@ export default function CatalogProductDetails({
         ]}
       />
 
-      <div className="mt-3 xl:hidden">
-        <CatalogProductSwitcher
-          products={subcategory.products.map((item) => ({ slug: item.slug, name: item.name }))}
-          currentSlug={activeProduct.slug}
-          basePath={basePath}
-          onSelect={selectProduct}
-        />
-      </div>
-
-      <div className="mt-4 grid grid-cols-1 gap-4 md:gap-5 xl:mt-5 xl:grid-cols-[minmax(10.5rem,0.46fr)_minmax(0,1.54fr)] xl:items-start xl:gap-6 2xl:gap-8">
+      <div className="mt-3 grid grid-cols-1 gap-3 md:gap-5 xl:mt-5 xl:grid-cols-[minmax(10.5rem,0.46fr)_minmax(0,1.54fr)] xl:items-start xl:gap-6 2xl:gap-8">
         <aside className="hidden min-w-0 xl:sticky xl:top-28 xl:block xl:self-start">
           <p className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-navy">
             {subcategory.name}
@@ -121,7 +112,7 @@ export default function CatalogProductDetails({
 
         <div
           key={activeProduct.slug}
-          className="min-w-0 grid grid-cols-1 gap-4 animate-[product-soft-fade_200ms_ease-out] md:gap-5 lg:grid-cols-[minmax(0,1.42fr)_minmax(0,1fr)] lg:items-start lg:gap-6 xl:gap-7 motion-reduce:animate-none"
+          className="min-w-0 grid grid-cols-1 gap-3 animate-[product-soft-fade_200ms_ease-out] md:gap-5 lg:grid-cols-[minmax(0,1.42fr)_minmax(0,1fr)] lg:items-start lg:gap-6 xl:gap-7 motion-reduce:animate-none"
         >
           <div className="min-w-0 w-full">
             <CatalogProductGallery
@@ -136,9 +127,18 @@ export default function CatalogProductDetails({
               <span className="section-label-rule" />
               {category.name}
             </p>
-            <h1 className="section-heading mt-1.5 break-words text-[1.625rem] leading-[1.12] sm:text-[1.75rem] md:text-[1.875rem] lg:text-[2rem] lg:leading-[1.1] xl:text-[37px] xl:leading-[1.1]">
+            <h1 className="section-heading mt-1 break-words text-[1.5rem] leading-[1.14] sm:text-[1.75rem] md:text-[1.875rem] lg:mt-1.5 lg:text-[2rem] lg:leading-[1.1] xl:text-[37px] xl:leading-[1.1]">
               {activeProduct.name}
             </h1>
+
+            <div className="mt-2 xl:hidden">
+              <CatalogProductSwitcher
+                products={subcategory.products.map((item) => ({ slug: item.slug, name: item.name }))}
+                currentSlug={activeProduct.slug}
+                basePath={basePath}
+                onSelect={selectProduct}
+              />
+            </div>
 
             <div className="mt-2.5 min-w-0 overflow-hidden rounded-xl border border-border text-sm">
               <dl className="flex flex-col divide-y divide-border">

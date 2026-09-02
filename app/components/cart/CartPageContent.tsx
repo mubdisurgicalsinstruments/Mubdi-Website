@@ -46,7 +46,7 @@ function CartLineItem({
   const productHref = `/products/${item.categorySlug}/${item.subcategorySlug}/${item.productSlug}`;
 
   return (
-    <article className="grid gap-4 border-b border-border py-5 last:border-b-0 sm:grid-cols-[5.5rem_1fr_auto] sm:items-center">
+    <article className="grid min-w-0 gap-4 border-b border-border py-4 last:border-b-0 sm:grid-cols-[5.5rem_1fr_auto] sm:items-center sm:py-5">
       <Link
         href={productHref}
         className="relative aspect-square overflow-hidden rounded-lg border border-border bg-warm-gray/40"
@@ -169,18 +169,18 @@ export default function CartPageContent() {
 
   return (
     <>
-      <section className="mx-auto max-w-7xl px-5 py-8 sm:px-8 sm:py-10 lg:px-10">
+      <section className="mx-auto max-w-7xl px-4 py-6 sm:px-8 sm:py-10 lg:px-10">
       <p className="section-label">
         <span className="section-label-rule" />
         Selected Instruments
       </p>
-      <h1 className="section-heading mt-2 text-4xl sm:text-5xl">Your Instrument List</h1>
-      <p className="body-copy mt-3 max-w-2xl">
+      <h1 className="section-heading mt-2 text-[1.75rem] leading-[1.15] sm:text-5xl sm:leading-[1.12]">Your Instrument List</h1>
+      <p className="body-copy mt-2 max-w-2xl text-[0.9375rem] leading-relaxed sm:mt-3 sm:text-base sm:leading-[1.75]">
         Review your selected instruments and submit your requirements for a quotation.
       </p>
 
-      <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_22rem] lg:items-start">
-        <div className="rounded-xl border border-border bg-white px-4 sm:px-5">
+      <div className="mt-6 grid gap-6 lg:mt-8 lg:grid-cols-[1fr_22rem] lg:items-start lg:gap-8">
+        <div className="min-w-0 rounded-xl border border-border bg-white px-3 sm:px-5">
           {items.map((item) => (
             <CartLineItem
               key={item.id}

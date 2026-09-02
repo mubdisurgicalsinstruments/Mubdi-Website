@@ -43,6 +43,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@media (max-width: 1023px) {
+  .section-heading {
+    letter-spacing: -0.035em;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    min-height: 2.75rem;
+  }
+}
+
 /* Shared design-language utilities (visual consistency across pages) */
 .section-label {
   display: flex;
