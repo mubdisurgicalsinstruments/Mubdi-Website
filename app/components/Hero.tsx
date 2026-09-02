@@ -36,8 +36,8 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative mx-auto w-full max-w-xl animate-[hero-fade-up_800ms_cubic-bezier(0.22,1,0.36,1)_180ms_both] lg:ml-auto lg:mr-0 lg:max-w-[88%] motion-reduce:animate-none">
-          <div className="relative aspect-[1.12/1] max-h-[min(52vw,15.5rem)] animate-[hero-float_4.8s_ease-in-out_infinite] overflow-hidden rounded-bl-[3rem] rounded-tr-[3rem] bg-navy shadow-[0_24px_48px_rgba(10,35,66,0.16)] sm:max-h-none sm:aspect-[1.08/1] sm:rounded-bl-[6.5rem] sm:rounded-tr-[6.5rem] motion-reduce:animate-none">
+        <div className="relative w-full animate-[hero-fade-up_800ms_cubic-bezier(0.22,1,0.36,1)_180ms_both] sm:mx-auto sm:max-w-xl lg:ml-auto lg:mr-0 lg:max-w-[88%] motion-reduce:animate-none">
+          <div className="relative w-full aspect-[1.12/1] animate-[hero-float_4.8s_ease-in-out_infinite] overflow-hidden rounded-bl-[3rem] rounded-tr-[3rem] bg-navy shadow-[0_24px_48px_rgba(10,35,66,0.16)] sm:aspect-[1.08/1] sm:rounded-bl-[6.5rem] sm:rounded-tr-[6.5rem] motion-reduce:animate-none">
             <Image
               src="/images/ChatGPT%20Image%20Aug%2017%2C%202026%2C%2004_54_45%20PM.png"
               alt="Precision stainless-steel surgical instruments arranged in a studio setting"
