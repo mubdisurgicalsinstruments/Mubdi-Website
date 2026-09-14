@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Script from "next/script";
 import { CartProvider } from "@/app/components/cart/CartProvider";
 import JsonLd from "@/app/components/catalog/JsonLd";
 import { organizationJsonLd, websiteJsonLd } from "@/app/lib/json-ld";
 import { SITE_URL } from "@/app/lib/seo";
 import "./globals.css";
+
+const GA_MEASUREMENT_ID = "G-63VL7WXR1P";
 
 const plusJakarta = localFont({
   src: "./fonts/PlusJakartaSans-latin.woff2",
@@ -46,6 +49,18 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${plusJakarta.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans text-navy">
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
         <JsonLd data={[organizationJsonLd(), websiteJsonLd()]} />
         <CartProvider>{children}</CartProvider>
       </body>
